@@ -1,0 +1,322 @@
+diff --git dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-heroCertificationNo.html dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-heroCertificationNo.html
+index 36b903440ca..81161ebbfda 100644
+--- dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-heroCertificationNo.html
++++ dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-heroCertificationNo.html
+@@ -1,11 +1,11 @@
+ <html><body scroll="no">
+ <table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+ 	<tr><td height=34></td></tr>
+-	<tr><td align=center>You are not qualified to become a hero.</td></tr>
++	<tr><td align=center>You can't become a Hero.</td></tr>
+ 	<tr><td height=10></td></tr>
+-	<tr><td align=center></td></tr>
++	<tr><td align=center>(To be eligible for the Hero or Legend status, as well as the 1st and 2nd places in the class rankings, you need to take part in a certain number of matches during one cycle.)</td></tr>
+ 	<tr><td height=34></td></tr>
+ 	<tr><td align=center><button action="bypass -h Script MonumentOfHeroes index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+-	<tr><td height=200></td></tr>
++	<tr><td height=150></td></tr>
+ </table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-legendCertificationNo.html dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-legendCertificationNo.html
+new file mode 100644
+index 00000000000..8de1ff8c8cf
+--- /dev/null
++++ dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-legendCertificationNo.html
+@@ -0,0 +1,11 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++	<tr><td height=34></td></tr>
++	<tr><td align=center>You can't become a Legend.</td></tr>
++	<tr><td height=10></td></tr>
++	<tr><td align=center>(To be eligible for the Hero or Legend status, as well as the 1st and 2nd places in the class rankings, you need to take part in a certain number of matches during one cycle.)</td></tr>
++	<tr><td height=34></td></tr>
++	<tr><td align=center><button action="bypass -h Script MonumentOfHeroes index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	<tr><td height=150></td></tr>
++</table>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noblesse.html dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noblesse.html
+index 675f991e213..9ca4594ff09 100644
+--- dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noblesse.html
++++ dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noblesse.html
+@@ -6,13 +6,14 @@
+ 	</table>
+ 	<!-- // Olympiad Emblem -->
+ 	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td align=center>The Obelisk is etched with images of heroes.</td></tr>
++		<tr><td align=center>It is an obelisk with faces of the heroes carved on it.</td></tr>
+ 		<tr><td height=10></td></tr>
+-		<tr><td align=center>It offers several services with regard to heroes.</td></tr>
+-		<tr><td height=34></td></tr>
++		<tr><td align=center>Here all the heroes can receive their rightful rewards and privileges.</td></tr>
++		<tr><td height=24></td></tr>
+-		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes heroCertification" value="Hero Certification" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes MonumentOfHeroes-reward.html" value="Receive Reward" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes heroList" value="Hero List" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td></tr>
++		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes legendCertification" value="Become a Legend" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td></tr>
++		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes heroCertification" value="Become a Hero" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td></tr>
++		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes reward" value="Get the reward" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
++		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes heroList" value="Check the list of heroes" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td></tr>
+ 	</table>
+ </td></tr></table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-weaponNo.html dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-weaponNo.html
+index d9d0a252250..f2ab824e700 100644
+--- dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-weaponNo.html
++++ dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-weaponNo.html
+@@ -3,9 +3,9 @@
+ 	<tr><td height=34></td></tr>
+ 	<tr><td align=center>If you are not a hero, you cannot receive a weapon.</td></tr>
+ 	<tr><td height=10></td></tr>
+-	<tr><td align=center>Please come back next time as a hero.</td></tr>
++	<tr><td align=center>Please, come back next time as a hero.</td></tr>
+ 	<tr><td height=34></td></tr>
+-	<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	<tr><td align=center><button action="bypass -h Script MonumentOfHeroes index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+ 	<tr><td height=200></td></tr>
+ </table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes.java dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes.java
+index f8427b2dcc8..398505c4f8e 100644
+--- dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes.java
++++ dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes.java
+@@ -26,14 +26,16 @@ import org.l2jmobius.gameserver.config.OlympiadConfig;
+ import org.l2jmobius.gameserver.data.xml.ClassListData;
+ import org.l2jmobius.gameserver.entity.actor.Npc;
+ import org.l2jmobius.gameserver.entity.actor.Player;
++import org.l2jmobius.gameserver.managers.RankManager;
+ import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+ import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+ import org.l2jmobius.gameserver.mechanics.script.Script;
+ import org.l2jmobius.gameserver.network.SystemMessageId;
+ import org.l2jmobius.gameserver.network.serverpackets.ExHeroList;
+ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
++import org.l2jmobius.gameserver.util.StatSet;
+ 
+ /**
+  * Monument of Heroes AI.
+- * @author St3eT, Mobius
++ * @author St3eT, Mobius, Notorion
+  */
+@@ -105,6 +107,11 @@ public class MonumentOfHeroes extends Script
+ 		String htmltext = null;
+ 		switch (event)
+ 		{
++			case "reward":
++			{
++				htmltext = (Hero.getInstance().isHero(player.getObjectId()) || player.isLegend()) ? "MonumentOfHeroes-reward.html" : "MonumentOfHeroes-weaponNo.html";
++				break;
++			}
+ 			case "MonumentOfHeroes-reward.html":
+ 			{
+ 				htmltext = event;
+@@ -241,6 +248,24 @@ public class MonumentOfHeroes extends Script
+ 				}
+ 				break;
+ 			}
++			case "legendCertification":
++			{
++				final StatSet legendRank = RankManager.getInstance().getOlyRankList().get(1);
++				final boolean isLegendCandidate = (legendRank != null) && (player.getObjectId() == legendRank.getInt("charId", 0));
++				if (isLegendCandidate && Hero.getInstance().isUnclaimedHero(player.getObjectId()))
++				{
++					htmltext = "MonumentOfHeroes-heroCertification.html";
++				}
++				else if (player.isLegend())
++				{
++					htmltext = "MonumentOfHeroes-heroCertificationAlready.html";
++				}
++				else
++				{
++					htmltext = "MonumentOfHeroes-legendCertificationNo.html";
++				}
++				break;
++			}
+ 			case "heroCertification":
+ 			{
+ 				if (Hero.getInstance().isUnclaimedHero(player.getObjectId()))
+diff --git dist/game/data/stats/skills/62000-62099.xml dist/game/data/stats/skills/62000-62099.xml
+index e562c25..e0cf5c3 100644
+--- dist/game/data/stats/skills/62000-62099.xml
++++ dist/game/data/stats/skills/62000-62099.xml
+@@ -1350,101 +1350,59 @@
+ 		<reuseDelay>2000</reuseDelay>
+ 		<effects>
+ 			<effect name="MaxHp">
+-				<amount>
+-					<value level="1">75</value>
+-					<value level="2">85</value>
+-				</amount>
++				<amount>85</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="MaxMp">
+-				<amount>
+-					<value level="1">75</value>
+-					<value level="2">85</value>
+-				</amount>
++				<amount>85</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="MaxCp">
+-				<amount>
+-					<value level="1">75</value>
+-					<value level="2">85</value>
+-				</amount>
++				<amount>85</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="PhysicalDefence">
+-				<amount>
+-					<value level="1">80</value>
+-					<value level="2">95</value>
+-				</amount>
++				<amount>95</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="MagicalDefence">
+-				<amount>
+-					<value level="1">75</value>
+-					<value level="2">90</value>
+-				</amount>
++				<amount>90</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="DefenceAttribute">
+-				<amount>
+-					<value level="1">10</value>
+-					<value level="2">50</value>
+-				</amount>
++				<amount>50</amount>
+ 				<attribute>FIRE</attribute>
+ 			</effect>
+ 			<effect name="DefenceAttribute">
+-				<amount>
+-					<value level="1">10</value>
+-					<value level="2">50</value>
+-				</amount>
++				<amount>50</amount>
+ 				<attribute>WATER</attribute>
+ 			</effect>
+ 			<effect name="DefenceAttribute">
+-				<amount>
+-					<value level="1">10</value>
+-					<value level="2">50</value>
+-				</amount>
++				<amount>50</amount>
+ 				<attribute>WIND</attribute>
+ 			</effect>
+ 			<effect name="DefenceAttribute">
+-				<amount>
+-					<value level="1">10</value>
+-					<value level="2">50</value>
+-				</amount>
++				<amount>50</amount>
+ 				<attribute>EARTH</attribute>
+ 			</effect>
+ 			<effect name="DefenceAttribute">
+-				<amount>
+-					<value level="1">10</value>
+-					<value level="2">50</value>
+-				</amount>
++				<amount>50</amount>
+ 				<attribute>HOLY</attribute>
+ 			</effect>
+ 			<effect name="DefenceAttribute">
+-				<amount>
+-					<value level="1">10</value>
+-					<value level="2">50</value>
+-				</amount>
++				<amount>50</amount>
+ 				<attribute>DARK</attribute>
+ 			</effect>
+ 			<effect name="DefenceCriticalRate">
+-				<amount>
+-					<value level="1">15</value>
+-					<value level="2">25</value>
+-				</amount>
++				<amount>25</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="DefenceMagicCriticalRate">
+-				<amount>
+-					<value level="1">15</value>
+-					<value level="2">25</value>
+-				</amount>
++				<amount>25</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="DefencePhysicalSkillCriticalRate">
+-				<amount>
+-					<value level="1">15</value>
+-					<value level="2">25</value>
+-				</amount>
++				<amount>25</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+ 			<effect name="DispelBySlotProbability">
+@@ -1463,7 +1421,7 @@
+ 		<targetType>TARGET</targetType>
+ 		<abnormalLevel>6</abnormalLevel>
+ 		<abnormalTime>600</abnormalTime>
+-		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
++		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
+ 		<affectRange>1100</affectRange>
+ 		<affectScope>SINGLE</affectScope>
+ 		<basicProperty>NONE</basicProperty>
+diff --git java/org/l2jmobius/gameserver/mechanics/olympiad/OlympiadGameNormal.java java/org/l2jmobius/gameserver/mechanics/olympiad/OlympiadGameNormal.java
+index 366ebe3f319..0e9d04042eb 100644
+--- java/org/l2jmobius/gameserver/mechanics/olympiad/OlympiadGameNormal.java
++++ java/org/l2jmobius/gameserver/mechanics/olympiad/OlympiadGameNormal.java
+@@ -1398,15 +1398,17 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
+ 		final Player player1 = _playerOne.getPlayer();
+ 		if (player1 != null)
+ 		{
+-			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_HARMONY.getSkill());
+ 			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_MELODY.getSkill());
++			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_SERENITY.getSkill());
++			SkillCaster.triggerCast(player1, player1, CommonSkill.OLYMPIAD_HARMONY.getSkill());
+ 		}
+ 		
+ 		final Player player2 = _playerTwo.getPlayer();
+ 		if (player2 != null)
+ 		{
+-			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_HARMONY.getSkill());
+ 			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_MELODY.getSkill());
++			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_SERENITY.getSkill());
++			SkillCaster.triggerCast(player2, player2, CommonSkill.OLYMPIAD_HARMONY.getSkill());
+ 		}
+ 	}
+ 	
+diff --git java/org/l2jmobius/gameserver/mechanics/skill/CommonSkill.java java/org/l2jmobius/gameserver/mechanics/skill/CommonSkill.java
+index 8872ff7247c..73bc81c3174 100644
+--- java/org/l2jmobius/gameserver/mechanics/skill/CommonSkill.java
++++ java/org/l2jmobius/gameserver/mechanics/skill/CommonSkill.java
+@@ -76,8 +76,9 @@ public enum CommonSkill
+ 	EINHASAD_OVERSEEING_4(29413, 4),
+ 	EINHASAD_CHAINS(29414, 1),
+ 	TELEPORTATION_CUBE(39723, 1),
+-	OLYMPIAD_MELODY(34247, 1),
+-	OLYMPIAD_HARMONY(32415, 1),
++	OLYMPIAD_MELODY(62078, 1),
++	OLYMPIAD_SERENITY(62079, 1),
++	OLYMPIAD_HARMONY(62080, 1),
+ 	OLYMPIAD_WIN(32417, 1),
+ 	BOT_REPORT_STATUS(55031, 1);
+ 	
+diff --git java/org/l2jmobius/gameserver/managers/RankManager.java java/org/l2jmobius/gameserver/managers/RankManager.java
+index 485eab83288..98e1362a6f6 100644
+--- java/org/l2jmobius/gameserver/managers/RankManager.java
++++ java/org/l2jmobius/gameserver/managers/RankManager.java
+@@ -59,7 +59,7 @@ public class RankManager
+ 	private static final String SELECT_CHARACTERS_PVP = "SELECT charId,char_name,level,race,base_class, clanid, deaths, kills, pvpkills FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 84 ORDER BY kills DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
+ 	private static final String SELECT_CHARACTERS_BY_RACE = "SELECT charId FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 84 AND race = ? ORDER BY exp DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
+ 	
+-	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost, olympiad_nobles.competitions_drawn FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
++	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost, olympiad_nobles.competitions_drawn FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId AND olympiad_nobles.competitions_done > 0 ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
+ 	private static final String GET_HEROES = "SELECT characters.charId, characters.char_name, characters.race, characters.sex, characters.base_class, characters.level, characters.clanid, olympiad_nobles_eom.competitions_won, olympiad_nobles_eom.competitions_lost, olympiad_nobles_eom.competitions_drawn, olympiad_nobles_eom.olympiad_points, heroes.legend_count, heroes.count FROM heroes, characters, olympiad_nobles_eom WHERE characters.charId = heroes.charId AND characters.charId = olympiad_nobles_eom.charId AND heroes.played = 1 AND characters.accesslevel = 0 ORDER BY olympiad_nobles_eom.olympiad_points DESC, characters.base_class ASC LIMIT " + RankManager.PLAYER_LIMIT;
+ 	private static final String GET_CHARACTERS_BY_CLASS = "SELECT charId FROM characters WHERE (" + CURRENT_TIME + " - cast(lastAccess as signed) < " + TIME_LIMIT + ") AND accesslevel = 0 AND level > 84 AND characters.base_class = ? ORDER BY exp DESC, onlinetime DESC LIMIT " + PLAYER_LIMIT;
+ 	

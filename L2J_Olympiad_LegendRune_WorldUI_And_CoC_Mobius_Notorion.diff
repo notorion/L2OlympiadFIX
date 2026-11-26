@@ -1,0 +1,1099 @@
+diff --git dist/game/config/CeremonyOfChaos.ini dist/game/config/CeremonyOfChaos.ini
+index 9c8970b..0a9f1f2 100644
+--- dist/game/config/CeremonyOfChaos.ini
++++ dist/game/config/CeremonyOfChaos.ini
+@@ -10,12 +10,12 @@
+ # ---------------------------------------------------------------------------
+ 
+ # Enable CoC only on specific days. Usage: 1,2,3,4,5,6,7 (SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY)
+-# Default: 3,4,5 (Tuesday, Wednesday, Thursday)
+-CoCCompetitionDays = 3,4,5
++# Default: 2,3,4,5 (Monday, Tuesday, Wednesday, Thursday)
++CoCCompetitionDays = 2,3,4,5
+ 
+-# Ceremony of Chaos Start Time in Military hours Default 6pm (18) 
+-# Default: 18
+-CoCStartTime = 18
++# Ceremony of Chaos Start Time in Military hours Default 8pm (20)
++# Default: 20
++CoCStartTime = 20
+ 
+ # Min number of participants
+ # Default: 2
+diff --git dist/game/data/html/default/33685-1.htm dist/game/data/html/default/33685-1.htm
+index b99dfeb..e149962 100644
+--- dist/game/data/html/default/33685-1.htm
++++ dist/game/data/html/default/33685-1.htm
+@@ -1,23 +1,67 @@
+-<html><body scroll="no">
+-<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+-<tr><td valign="top" align="center"><!-- CC  -->
+-	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td width=256 height=50></td></tr>
++<html>
++
++<body scroll="no">
++	<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++		<tr>
++			<td valign="top" align="center"><!-- CC  -->
++				<table border=0 cellpadding=0 cellspacing=0>
++					<tr>
++						<td width=256 height=50></td>
++					</tr>
++				</table>
++				<!-- // CC  -->
++				<table border=0 cellpadding=0 cellspacing=0>
++					<tr>
++						<td align=center>With the <font color="LEVEL">Marks of Battle</font> from Ceremony of Chaos,
++						</td>
++					</tr>
++					<tr>
++						<td height=10></td>
++					</tr>
++					<tr>
++						<td align=center>you can purchase a variety of items.</td>
++					</tr>
++					<tr>
++						<td height=50></td>
++					</tr>
++					<tr>
++						<td align=center><button action="bypass -h Script MysteriousSteward greatestWarriorReward"
++								value="Greatest Warrior Reward" width=200 height=31
++								back="L2UI_CT1.OlympiadWnd.OlympiadWnd_DF_Reward_Down"
++								fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td>
++					</tr>
++					<tr>
++						<td align=center><button action="bypass -h npc_%objectId%_multisell 316880001"
++								value="Consumables" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down"
++								fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td>
++					</tr>
++					<tr>
++						<td align=center><button action="bypass -h npc_%objectId%_multisell 316880002"
++								value="PvP Consumables" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down"
++								fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td>
++					</tr>
++					<tr>
++						<td align=center><button action="bypass -h npc_%objectId%_multisell 316880003" value="Equipment"
++								width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down"
++								fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td>
++					</tr>
++					<tr>
++						<td height=10></td>
++					</tr>
++					<tr>
++						<td align=center><button action="bypass npc_%objectId%_Chat 0" value="Back" width=200 height=31
++								back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td>
++					</tr>
++					<tr>
++						<td height=40></td>
++					</tr>
++					<tr>
++						<td></td>
++					</tr>
++				</table>
++			</td>
++		</tr>
+ 	</table>
+-	<!-- // CC  -->
+-	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td align=center>With the <font color="LEVEL">Marks of Battle</font> from Ceremony of Chaos,</td></tr>
+-		<tr><td height=10></td></tr>
+-		<tr><td align=center>you can purchase a variety of items.</td></tr>
+-		<tr><td height=50></td></tr>
+-		<!--<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Greatest Warrior Reward" width=200 height=31 back="L2UI_CT1.OlympiadWnd.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>--><!-- TODO  -->
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 3368501" value="Consumables" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 3368502" value="PvP Consumables" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 3368503" value="Equipment" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
+-		<tr><td height=10></td></tr>
+-		<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+-		<tr><td height=40></td></tr>
+-		<tr><td></td></tr>
+-</table>
+-</td></tr></table>
+-</body></html>
+\ No newline at end of file
++</body>
++
++</html>
+\ No newline at end of file
+diff --git dist/game/data/html/default/33685-2.htm dist/game/data/html/default/33685-2.htm
+index 0981206..61ee032 100644
+--- dist/game/data/html/default/33685-2.htm
++++ dist/game/data/html/default/33685-2.htm
+@@ -17,13 +17,13 @@
+ 		<tr><td align=center>It is a great honor,</td></tr>
+ 		<tr><td height=10></td></tr>
+ 		<tr><td align=center>so be serious about the competition.</td></tr>
+-		<tr><td height=50></td></tr>
+-		<tr><td align=center><button action="bypass npc_%objectId%_Chat 3" value="Learn more about the Ceremony of Chaos" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
+-		<!--<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Learn more about the best clan" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>--><!--TODO-->
+-		<!--<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Best clan of the month" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>--><!--TODO-->
+-		<!--<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Best candidate of the month" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>--><!--TODO-->
++		<tr><td height=35></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 3" value="Learn more about the Ceremony of Chaos" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 4" value="Learn more about the best clan" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
++		<tr><td align=center><button action="bypass -h Script MysteriousSteward bestClan" value="Best clan of the month" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
++		<tr><td align=center><button action="bypass -h Script MysteriousSteward bestCandidate" value="Best candidate of the month" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+ 		<tr><td height=10></td></tr>
+-		<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 0" value="Back" width=200 height=30 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+ 		<tr><td height=40></td></tr>
+ 		<tr><td></td></tr>
+ </table>
+diff --git dist/game/data/html/default/33685-3.htm dist/game/data/html/default/33685-3.htm
+index 25b09ef..88e6bf1 100644
+--- dist/game/data/html/default/33685-3.htm
++++ dist/game/data/html/default/33685-3.htm
+@@ -1,12 +1,13 @@
+-<html><body><br>
+-<center>
+-Invitations will go out every day from 20:00 to 24:00 at 15-minute intervals. You can request to participate in the Ceremony of Chaos through this invitation.<br>
+-Only the chosen will stand on the battleground for the greatest of warriors.<br>
+-Up to 18 warriors can battle in one location. If you are lucky, you will be the only one left standing and become the winner. If you're lucky, that is.<br>
+-Anyway, the battle ends when there is only one left standing. We will take steps to ensure that you are unaware of each other's identities. If there are multiple challengers remaining after 5 minutes, the one with the highest number of kills will be the winner. Remember, everyone is an enemy here!<br>
+-When the winner is determined, 1 - 5 mysterious boxes will apprear at random. You can receive the rewards of victory through these boxes, as well as Mysterious Marks. Bring them to me and I will exchange them for reward items.<br>
+-Each cycle lasts a month, and for each cycle, the one with the most Mysterious Marks will earn the title of the greatest warrior. If the highest number of Mysterious Marks is equal, there will be no winner for that cycle.<br>
+-Also, the clan that fostered the greatest warrior shall earn the title of the greatest clan. You can exchange your Mysterious Marks for reward items without affecting the total score.<br>
+-<button action="bypass npc_%objectId%_Chat 0" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back">
+-</center>
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++<tr><td valign="top" align="center">
++	<table border=0 cellpadding=0 cellspacing=0>
++		<tr><td width=256 height=10></td></tr>
++	</table><br>
++	<table border=0 cellpadding=0 cellspacing=0 width=290>
++		<tr><td align=center>The invitation to the Ceremony of Chaos </td></tr><tr><td align=center>is delivered every 15 minutes between 20:00 and 24:00</td></tr><tr><td align=center> every Monday, Tuesday, Wednesday, and Thursday. </td></tr><tr><td align=center>You can request to participate through this invitation.</td></tr><tr><td align=center>Only the chosen will stand on the battleground.</td></tr><tr><td align=center>Up to 18 warriors can battle in a battleground.</td></tr><tr><td align=center>If you are lucky, you will be the only one sent to the battleground. </td></tr><tr><td align=center>That is, you can be the winner without any fighting. </td></tr><tr><td align=center>The battle lasts 5 minutes, or until only one challenger stands.</td></tr><tr><td align=center>If several challengers remain alive at the end of the match, the one with the highest number of kills will be the winner.</td></tr><tr><td align=center>The winner will be given </td></tr><tr><td align=center>up to 5 Mysterious Boxes, </td></tr><tr><td align=center>the victory reward, and the Mark of Battle.</td></tr><tr><td align=center>The Mark of Battle can be exchanged for another reward.</td></tr><tr><td align=center>Each cycle lasts a month, and for each cycle, the one with the greatest number of Marks of Battle </td></tr><tr><td align=center>will be the winner, the <font color="LEVEL">Greatest Warrior</font>.</td></tr><tr><td align=center>If two or more challengers have the same number of Marks of Battle, </td></tr><tr><td align=center>that cycle has no winner.</td></tr>
++		<tr><td height=15></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 2" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	</table>
++</td></tr></table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/html/default/33685-4.htm dist/game/data/html/default/33685-4.htm
+index a0ad2b1..b78a0a4 100644
+--- dist/game/data/html/default/33685-4.htm
++++ dist/game/data/html/default/33685-4.htm
+@@ -1,5 +1,13 @@
+-<html><body>Mysterious Butler:<br>
+-Here you can select the award. Want to take a look?<br>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 3368501">Choose a reward.</Button>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass npc_%objectId%_Chat 0">Back</Button>
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++<tr><td valign="top" align="center">
++	<table border=0 cellpadding=0 cellspacing=0>
++		<tr><td width=256 height=40></td></tr>
++	</table>
++	<table border=0 cellpadding=0 cellspacing=0 width=290>
++		<tr><td align=center>"The Greatest Clan" is </td></tr><tr><td align=center>a title granted by my master's authority to the clan that has produced the <font color="LEVEL">Greatest Warrior</font> <br></td></tr><tr><td align=center>for this month.<br1>This title is given to just <font color="LEVEL">one clan</font> among all clans.<br1>It is given at the beginning of a new cycle <br1>to the clan to which the greatest warrior belongs.<br1>Even if that warrior switches to another clan, <br1>the title is not transferred.<br1>Clan members who belong to the Greatest Clan <br1>will receive special buffs.</td></tr>
++		<tr><td height=35></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 2" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	</table>
++</td></tr></table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/html/default/33685-5.htm dist/game/data/html/default/33685-5.htm
+index 9c2a605..e51686b 100644
+--- dist/game/data/html/default/33685-5.htm
++++ dist/game/data/html/default/33685-5.htm
+@@ -1,7 +1,23 @@
+-<html><body>Mysterious Butler:<br>
+-Oh dear.An unqualified warrior cannot receive my master's precious gift.<br>
+-This gift belongs to only one! Only the winner, *the greatest warrior*, can receive it!<br>
+-You need to practice more, my friend!<br>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 3368502">Choose a reward.</Button>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass npc_%objectId%_Chat 0">Back.</Button>
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++<tr><td valign="top" align="center">
++	<table border=0 cellpadding=0 cellspacing=0>
++		<tr><td width=256 height=50></td></tr>
++	</table>
++	<table border=0 cellpadding=0 cellspacing=0>
++		<tr><td align=center>An unqualified warrior cannot receive</td></tr>
++		<tr><td height=10></td></tr>
++		<tr><td align=center>my master's precious gift.</td></tr>
++		<tr><td height=10></td></tr>
++		<tr><td align=center>This gift belongs to only one!</td></tr>
++		<tr><td height=10></td></tr>
++		<tr><td align=center>Only the winner, the <font color="LEVEL">Greatest Warrior</font>,</td></tr>
++		<tr><td height=10></td></tr>
++		<tr><td align=center>can receive it!</td></tr>
++		<tr><td height=10></td></tr>
++		<tr><td align=center>Hone your skills and come back.</td></tr>
++		<tr><td height=35></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 1" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	</table>
++</td></tr></table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/html/default/33685-6.htm dist/game/data/html/default/33685-6.htm
+index b9f6793..4d34c55 100644
+--- dist/game/data/html/default/33685-6.htm
++++ dist/game/data/html/default/33685-6.htm
+@@ -1,4 +1,13 @@
+-<html><body>Mysterious Butler:<br>
+-Under Development.<br>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass npc_%objectId%_Chat 0">Back</Button>
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++<tr><td valign="top" align="center">
++	<table border=0 cellpadding=0 cellspacing=0>
++		<tr><td width=256 height=80></td></tr>
++	</table>
++	<table border=0 cellpadding=0 cellspacing=0 width=250>
++		<tr><td align=center>%message%</td></tr>
++		<tr><td height=80></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 2" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	</table>
++</td></tr></table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/html/default/33685-7.htm dist/game/data/html/default/33685-7.htm
+index b9f6793..a2129fd 100644
+--- dist/game/data/html/default/33685-7.htm
++++ dist/game/data/html/default/33685-7.htm
+@@ -1,4 +1,13 @@
+-<html><body>Mysterious Butler:<br>
+-Under Development.<br>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass npc_%objectId%_Chat 0">Back</Button>
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++<tr><td valign="top" align="center">
++	<table border=0 cellpadding=0 cellspacing=0>
++		<tr><td width=256 height=80></td></tr>
++	</table>
++	<table border=0 cellpadding=0 cellspacing=0 width=250>
++		<tr><td align=center>This month's front runner has received <font color="LEVEL">%marks%</font> Marks of Battle so far.</td></tr>
++		<tr><td height=80></td></tr>
++		<tr><td align=center><button action="bypass npc_%objectId%_Chat 2" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	</table>
++</td></tr></table>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/multisell/316880001.xml dist/game/data/multisell/316880001.xml
+new file mode 100644
+index 0000000..8a583c9
+--- /dev/null
++++ dist/game/data/multisell/316880001.xml
+@@ -0,0 +1,83 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
++	<npcs>
++		<npc>31688</npc> <!-- Olympiad Manager -->
++		<npc>33685</npc> <!-- Mysterious Butler -->
++	</npcs>
++	<item>
++		<ingredient id="45584" count="80" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="1310000" /> <!-- Adena -->
++		<production id="30297" count="1" /> <!-- Superior Giant's Codex -->
++	</item>
++	<item>
++		<ingredient id="45584" count="300" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="5080000" /> <!-- Adena -->
++		<production id="30299" count="1" /> <!-- Superior Giant's Codex - Discipline -->
++	</item>
++	<item>
++		<ingredient id="45584" count="600" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="10000000" /> <!-- Adena -->
++		<production id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
++	</item>
++	<item>
++		<ingredient id="45584" count="1200" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="20000000" /> <!-- Adena -->
++		<production id="46150" count="1" /> <!-- Superior Giant's Codex - Chapter 1 -->
++	</item>
++	<item>
++		<ingredient id="45584" count="3000" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="10000000" /> <!-- Adena -->
++		<production id="46152" count="1" /> <!-- Superior Giant's Codex - Discipline Chapter 1 -->
++	</item>
++	<item>
++		<ingredient id="45584" count="10000" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="100000000" /> <!-- Adena -->
++		<production id="46151" count="1" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13731" count="1" /> <!-- Blessed Scroll of Escape - Gludio -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13732" count="1" /> <!-- Blessed Scroll of Escape - Dion -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13733" count="1" /> <!-- Blessed Scroll of Escape - Giran -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13734" count="1" /> <!-- Blessed Scroll of Escape - Oren -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13735" count="1" /> <!-- Blessed Scroll of Escape - Aden -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13736" count="1" /> <!-- Blessed Scroll of Escape - Innadril -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13737" count="1" /> <!-- Blessed Scroll of Escape - Goddard -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13738" count="1" /> <!-- Blessed Scroll of Escape - Rune -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="250000" /> <!-- Adena -->
++		<production id="13739" count="1" /> <!-- Blessed Scroll of Escape - Schuttgart -->
++	</item>
++
++</list>
+\ No newline at end of file
+diff --git dist/game/data/multisell/316880002.xml dist/game/data/multisell/316880002.xml
+new file mode 100644
+index 0000000..6a5743f
+--- /dev/null
++++ dist/game/data/multisell/316880002.xml
+@@ -0,0 +1,76 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
++	<npcs>
++		<npc>31688</npc>
++		<npc>33685</npc>
++	</npcs>
++	<item>
++		<ingredient id="45584" count="100" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="10000000" /> <!-- Adena -->
++		<production id="48625" count="1" /> <!-- Hero's Rune Box (1-hour) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="20" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="500000" /> <!-- Adena -->
++		<production id="48624" count="1" /> <!-- Hero's Miracle Cure -->
++	</item>
++	<item>
++		<ingredient id="45584" count="10" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="500000" /> <!-- Adena -->
++		<production id="37894" count="1" /> <!-- Hero's Recovery Potion -->
++	</item>
++	<item>
++		<ingredient id="45584" count="2" /> <!-- Mark of Battle -->
++		<production id="35930" count="1" /> <!-- Chaos Recovery Potion -->
++	</item>
++	<item>
++		<ingredient id="45584" count="4" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="400000" /> <!-- Adena -->
++		<production id="40253" count="1" /> <!-- Potion of Protection: Confusion -->
++	</item>
++	<item>
++		<ingredient id="45584" count="4" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="400000" /> <!-- Adena -->
++		<production id="40255" count="1" /> <!-- Potion of Protection: Infection -->
++	</item>
++	<item>
++		<ingredient id="45584" count="4" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="400000" /> <!-- Adena -->
++		<production id="80927" count="1" /> <!-- Potion of Protection: Obstruction -->
++	</item>
++	<item>
++		<ingredient id="45584" count="4" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="400000" /> <!-- Adena -->
++		<production id="80928" count="1" /> <!-- Potion of Protection: Stupor -->
++	</item>
++	<item>
++		<ingredient id="45584" count="4" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="400000" /> <!-- Adena -->
++		<production id="47658" count="1" /> <!-- Potion of Protection: Danger Zone -->
++	</item>
++	<item>
++		<ingredient id="45584" count="2" /> <!-- Mark of Battle -->
++		<production id="34903" count="1" /> <!-- Mysterious Shadow -->
++	</item>
++	<item>
++		<ingredient id="45584" count="2" /> <!-- Mark of Battle -->
++		<production id="34904" count="1" /> <!-- Mysterious Power -->
++	</item>
++	<item>
++		<ingredient id="45584" count="2" /> <!-- Mark of Battle -->
++		<production id="36037" count="1" /> <!-- Mysterious Incantation -->
++	</item>
++	<item>
++		<ingredient id="45584" count="2" /> <!-- Mark of Battle -->
++		<production id="36038" count="1" /> <!-- Mysterious Defense -->
++	</item>
++	<item>
++		<ingredient id="45584" count="200" /> <!-- Mark of Battle -->
++		<production id="35929" count="1" /> <!-- Mysterious Ring -->
++	</item>
++	<item>
++		<ingredient id="45584" count="100" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="1000000" /> <!-- Adena -->
++		<production id="35931" count="1" /> <!-- Mysterious Scroll -->
++	</item>
++</list>
+diff --git dist/game/data/multisell/316880003.xml dist/game/data/multisell/316880003.xml
+new file mode 100644
+index 0000000..31ea1b7
+--- /dev/null
++++ dist/game/data/multisell/316880003.xml
+@@ -0,0 +1,71 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
++	<npcs>
++		<npc>31688</npc>
++		<npc>33685</npc>
++	</npcs>
++	<item>
++		<ingredient id="45584" count="2200" /> <!-- Mark of Battle -->
++		<production id="48623" count="1" /> <!-- Hero's Ring (30-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="2200" /> <!-- Mark of Battle -->
++		<production id="47656" count="1" /> <!-- Hero's Earring (30-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="4" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="200000" /> <!-- Adena -->
++		<production id="48763" count="1" /> <!-- Talisman of Battle - Cancel Hide (1-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="7" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="350000" /> <!-- Adena -->
++		<production id="48764" count="1" /> <!-- Talisman of Battle - Cancel Hide (3-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="6" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="300000" /> <!-- Adena -->
++		<production id="45614" count="1" /> <!-- Talisman of Battle - Attack (1-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="10" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="500000" /> <!-- Adena -->
++		<production id="45615" count="1" /> <!-- Talisman of Battle - Attack (3-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="6" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="300000" /> <!-- Adena -->
++		<production id="45617" count="1" /> <!-- Talisman of Battle - Speed (1-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="10" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="500000" /> <!-- Adena -->
++		<production id="45618" count="1" /> <!-- Talisman of Battle - Speed (3-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="6" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="300000" /> <!-- Adena -->
++		<production id="45620" count="1" /> <!-- Talisman of Battle - Support (1-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="10" /> <!-- Mark of Battle -->
++		<ingredient id="57" count="500000" /> <!-- Adena -->
++		<production id="45621" count="1" /> <!-- Talisman of Battle - Support (3-day) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5500" /> <!-- Mark of Battle -->
++		<production id="45606" count="1" /> <!-- Special Magic Ornament Eternal Belt (PvE Attack) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5500" /> <!-- Mark of Battle -->
++		<production id="45607" count="1" /> <!-- Special Magic Ornament Eternal Belt (PvE Defense) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5500" /> <!-- Mark of Battle -->
++		<production id="45608" count="1" /> <!-- Special Magic Ornament Eternal Belt (PvP Attack) -->
++	</item>
++	<item>
++		<ingredient id="45584" count="5500" /> <!-- Mark of Battle -->
++		<production id="45609" count="1" /> <!-- Special Magic Ornament Eternal Belt (PvP Defense) -->
++	</item>
++</list>
+diff --git dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noNoblesse.html dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noNoblesse.html
+index 62f482f..b4b1350 100644
+--- dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noNoblesse.html
++++ dist/game/data/scripts/ai/others/MonumentOfHeroes/MonumentOfHeroes-noNoblesse.html
+@@ -1,18 +1,43 @@
+-<html><body scroll="no">
+-<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+-<tr><td valign="top" align="center"><!-- Olympiad Emblem -->
+-	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
++<html>
++
++<body scroll="no">
++	<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++		<tr>
++			<td valign="top" align="center"><!-- Olympiad Emblem -->
++				<table border=0 cellpadding=0 cellspacing=0>
++					<tr>
++						<td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td>
++					</tr>
++				</table>
++				<!-- // Olympiad Emblem -->
++				<table border=0 cellpadding=0 cellspacing=0>
++					<tr>
++						<td align=center>You, are neither Noblesse nor Exalted.</td>
++					</tr>
++					<tr>
++						<td height=10></td>
++					</tr>
++					<tr>
++						<td align=center>You can see the heroes of this era.</td>
++					</tr>
++					<tr>
++						<td height=34></td>
++					</tr>
++					<tr>
++						<td align=center><button action="bypass -h Script MonumentOfHeroes heroList" value="Hero List"
++								width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down"
++								fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td>
++					</tr>
++					<tr>
++						<td height=60></td>
++					</tr>
++					<tr>
++						<td></td>
++					</tr>
++				</table>
++			</td>
++		</tr>
+ 	</table>
+-	<!-- // Olympiad Emblem -->
+-	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td align=center>You are not a noblesse.</td></tr>
+-		<tr><td height=10></td></tr>
+-		<tr><td align=center>You can check to see who the era's heroes are.</td></tr>
+-		<tr><td height=34></td></tr>
+-		<tr><td align=center><button action="bypass -h Script MonumentOfHeroes heroList" value="Hero List" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_HeroConfirm_Down" fore="L2UI_CT1.OlympiadWnd_DF_HeroConfirm"></td></tr>
+-		<tr><td height=60></td></tr>
+-		<tr><td></td></tr>
+-</table>
+-</td></tr></table>
+-</body></html>
+\ No newline at end of file
++</body>
++
++</html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/others/MysteriousSteward/MysteriousSteward.java dist/game/data/scripts/ai/others/MysteriousSteward/MysteriousSteward.java
+new file mode 100644
+index 0000000..7dcb9fc
+--- /dev/null
++++ dist/game/data/scripts/ai/others/MysteriousSteward/MysteriousSteward.java
+@@ -0,0 +1,116 @@
++/*
++ * Copyright (c) 2013 L2jMobius
++ * 
++ * Permission is hereby granted, free of charge, to any person obtaining a copy
++ * of this software and associated documentation files (the "Software"), to deal
++ * in the Software without restriction, including without limitation the rights
++ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++ * copies of the Software, and to permit persons to whom the Software is
++ * furnished to do so, subject to the following conditions:
++ * 
++ * The above copyright notice and this permission notice shall be
++ * included in all copies or substantial portions of the Software.
++ * 
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
++ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
++ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
++ */
++package ai.others.MysteriousSteward;
++
++import org.l2jmobius.gameserver.data.sql.CharInfoTable;
++import org.l2jmobius.gameserver.data.sql.ClanTable;
++import org.l2jmobius.gameserver.entity.actor.Npc;
++import org.l2jmobius.gameserver.entity.actor.Player;
++import org.l2jmobius.gameserver.entity.clan.Clan;
++import org.l2jmobius.gameserver.managers.GlobalVariablesManager;
++import org.l2jmobius.gameserver.mechanics.script.Script;
++import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
++
++/**
++ * Mysterious Steward AI (Ceremony of Chaos).
++ * @author Notorion
++ * @date 2026-11-21
++ */
++public class MysteriousSteward extends Script
++{
++	// NPC
++	private static final int MYSTERIOUS_STEWARD = 33685;
++	
++	private MysteriousSteward()
++	{
++		addStartNpc(MYSTERIOUS_STEWARD);
++		addTalkId(MYSTERIOUS_STEWARD);
++	}
++	
++	@Override
++	public String onEvent(String event, Npc npc, Player player)
++	{
++		switch (event)
++		{
++			case "greatestWarriorReward":
++			{
++				final int trueHeroId = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TRUE_HERO, 0);
++				if (player.isTrueHero() || (player.getObjectId() == trueHeroId))
++				{
++					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
++					html.setHtml("<html><body scroll=\"no\"><table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background=\"L2UI_CH3.refinewnd_back_Pattern\"><tr><td valign=\"top\" align=\"center\"><table border=0 cellpadding=0 cellspacing=0><tr><td width=256 height=70></td></tr></table><table border=0 cellpadding=0 cellspacing=0 width=250><tr><td align=center>Congratulations, <font color=\"LEVEL\">Greatest Warrior</font>!<br>Your monthly rewards have been delivered to you upon entering the world.</td></tr><tr><td height=60></td></tr><tr><td align=center><button action=\"bypass npc_" + npc.getObjectId() + "_Chat 1\" value=\"Back\" width=200 height=31 back=\"L2UI_CT1.OlympiadWnd_DF_Back_Down\" fore=\"L2UI_CT1.OlympiadWnd_DF_Back\"></td></tr></table></td></tr></table></body></html>");
++					player.sendPacket(html);
++				}
++				else
++				{
++					sendDefaultHtml(player, npc, "data/html/default/33685-5.htm", null, null);
++				}
++				break;
++			}
++			case "bestClan":
++			{
++				final int heroId = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TRUE_HERO, 0);
++				String message = "There is no Greatest Clan selected for this month yet.";
++				if (heroId > 0)
++				{
++					final String heroName = CharInfoTable.getInstance().getNameById(heroId);
++					final int clanId = CharInfoTable.getInstance().getClanIdById(heroId);
++					final Clan clan = clanId > 0 ? ClanTable.getInstance().getClan(clanId) : null;
++					if ((heroName != null) && (clan != null))
++					{
++						message = "Through the efforts of <font color=\"LEVEL\">" + heroName + "</font>, <font color=\"LEVEL\">" + clan.getName() + "</font> was selected as this month's Greatest Clan.";
++					}
++					else if (heroName != null)
++					{
++						message = "The Greatest Warrior of this month is <font color=\"LEVEL\">" + heroName + "</font>, who does not belong to a clan.";
++					}
++				}
++				sendDefaultHtml(player, npc, "data/html/default/33685-6.htm", "%message%", message);
++				break;
++			}
++			case "bestCandidate":
++			{
++				final int topMarks = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MARKS, 0);
++				sendDefaultHtml(player, npc, "data/html/default/33685-7.htm", "%marks%", String.valueOf(topMarks));
++				break;
++			}
++		}
++		
++		return null;
++	}
++	
++	private void sendDefaultHtml(Player player, Npc npc, String path, String placeholder, String value)
++	{
++		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
++		html.setFile(player, path);
++		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
++		if ((placeholder != null) && (value != null))
++		{
++			html.replace(placeholder, value);
++		}
++		player.sendPacket(html);
++	}
++	
++	public static void main(String[] args)
++	{
++		new MysteriousSteward();
++	}
++}
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-info.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-info.html
+index 636182a..85b783e 100644
+--- dist/game/data/scripts/ai/others/OlyManager/OlyManager-info.html
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-info.html
+@@ -1,15 +1,14 @@
+ <html><body scroll="no">
+ <table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+ 	<tr><td height=30></td></tr>
+-	<tr><td align=center>You can learn about World Olympiad rules from me.</td></tr>
+-	<tr><td height=10></td></tr>
+-	<tr><td align=center>Learn about Olympiad Points and then move on to the competitions.</td></tr>
++	<tr><td align=center>Here you can learn the rules of<br1>the World Olympiad.</td></tr>
++	<tr><td align=center>Learn more about the Olympiad points,<br1>and then move on to the competitions.</td></tr>
+ 	<tr><td height=50></td></tr>
+ 		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-infoHistory.html" value="General information" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+ 		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-infoRules.html" value="Competition rules" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-infoPoints.html" value="Olympiad Points" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-infoPoints.html" value="Olympiad points" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+ 		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-infoPointsCalc.html" value="Scoring rules" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+ 		<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+ 	<tr><td height=40></td></tr>
+ </table>
+-</body></html>
+\ No newline at end of file
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-joinMatchClass.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-joinMatchClass.html
+index 54ea74f..e303c1d 100644
+--- dist/game/data/scripts/ai/others/OlyManager/OlyManager-joinMatchClass.html
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-joinMatchClass.html
+@@ -3,11 +3,11 @@
+ 	<tr><td valign="top" align="center">
+ 	<table border=0 cellpadding=0 cellspacing=0>
+ 		<tr><td height=50></td></tr>
+-		<tr><td align=center>Do you want to participate in the World Olympiad?</td></tr>
++		<tr><td align=center>Participate in the World Olympiad?<br1>(You must participate in a set number of matches for 1 cycle in order to be selected for Legendary, Hero, Class 1st/2nd place)</td></tr>
+ 		<tr><td height=15></td></tr>
+ 		<tr><td align=center><font color="bea27b">(Round %olympiad_round%, Week %olympiad_week%, Number of current participants: %olympiad_participant%)</font></td></tr>
+ 		<tr><td height=34></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager register1v1" msg="1481" value="Register in the World Olympiad" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Fight1None_Down" fore="L2UI_CT1.OlympiadWnd_DF_Fight1None"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager register1v1" msg="1481" value="Request World Olympiad Match" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Fight1None_Down" fore="L2UI_CT1.OlympiadWnd_DF_Fight1None"></td></tr>
+ 		<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+ 		<tr><td height=80></td></tr>
+ 	</table>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRune.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRune.html
+new file mode 100644
+index 0000000..32d1bae
+--- /dev/null
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRune.html
+@@ -0,0 +1,12 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++	<tr><td height=30></td></tr>
++	<tr><td align=center>This reward is given<br1>to celebrate the new Legend.</td></tr>
++	<tr><td height=15></td></tr>
++	<tr><td align=center>Legend Celebration Rune (once a day)<br1>(The counter is reset every day at 6:30.)</td></tr>
++	<tr><td height=45></td></tr>
++	<tr><td align=center><button action="bypass -h Script OlyManager legendRune" value="Receive" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
++	<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	<tr><td height=40></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneAlready.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneAlready.html
+new file mode 100644
+index 0000000..1a05005
+--- /dev/null
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneAlready.html
+@@ -0,0 +1,9 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++	<tr><td height=50></td></tr>
++	<tr><td align=center>You have already received the Legend Celebration Rune today.<br1>(The counter is reset every day at 6:30.)</td></tr>
++	<tr><td height=50></td></tr>
++	<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	<tr><td height=100></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneNone.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneNone.html
+new file mode 100644
+index 0000000..7c0a3c4
+--- /dev/null
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneNone.html
+@@ -0,0 +1,9 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++	<tr><td height=50></td></tr>
++	<tr><td align=center>There is currently no Olympiad Legend on this server.</td></tr>
++	<tr><td height=50></td></tr>
++	<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	<tr><td height=100></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneSuccess.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneSuccess.html
+new file mode 100644
+index 0000000..b6eed87
+--- /dev/null
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-legendRuneSuccess.html
+@@ -0,0 +1,10 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++	<tr><td height=40></td></tr>
++	<tr><td align=center>Glorious warrior,<br1>I am looking forward to seeing you again.</td></tr>
++	<tr><td align=center>(1st and 2nd class runes will be deleted if you change your class.)</td></tr>
++	<tr><td height=30></td></tr>
++	<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
++	<tr><td height=100></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-noNoble.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-noNoble.html
+index 721497e..2eccbc9 100644
+--- dist/game/data/scripts/ai/others/OlyManager/OlyManager-noNoble.html
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-noNoble.html
+@@ -3,17 +3,16 @@
+ <tr><td valign="top" align="center">
+ 	<!-- Olympiad Emblem -->
+ 	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
++		<tr><td width=256 height=175 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+ 	</table>
+ 	<!-- // Olympiad Emblem -->
+ 	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td align=center>Welcome to the Olympiad.</td></tr>
++		<tr><td align=center>Welcome to the World Olympiad!<br1>This competition is available for characters who have reached Lv. 110, completed Awakening or 3rd Liberation and achieved the Noblesse or Exalted title.</td></tr>
+ 		<tr><td height=10></td></tr>
+-		<tr><td align=center>(Only level 85 or higher Noblesse characters of an Awakened class</td></tr>
+-		<tr><td align=center>can participate in the games.)</td></tr>
+-		<tr><td height=40></td></tr>
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_watchmatch" value="Watch Match" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-info.html" value="Examine" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
++		<tr><td align=center><button action="bypass -h npc_%objectId%_watchmatch" value="Watch battles" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-legendRune.html" value="Legend Celebration Rune" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-rewards.html" value="Reward" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-info.html" value="About the Olympiad" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+ 	</table>
+ </td></tr></table>
+-</body></html>
+\ No newline at end of file
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-noble.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-noble.html
+index 4b12783..7d7ad61 100644
+--- dist/game/data/scripts/ai/others/OlyManager/OlyManager-noble.html
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-noble.html
+@@ -2,18 +2,17 @@
+ <table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+ <tr><td valign="top" align="center"><!-- Olympiad Emblem -->
+ 	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
++		<tr><td width=256 height=145 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+ 	</table>
+ 	<!-- // Olympiad Emblem -->
+ 	<table border=0 cellpadding=0 cellspacing=0>
+-		<tr><td align=center>Welcome to the World Olympiad!</td></tr>
+-		<tr><td height=10></td></tr>
+-		<tr><td align=center>Follow the path of Heroes.</td></tr>
+-		<tr><td height=19></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager joinMatch" value="Request to participate" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Apply_Down" fore="L2UI_CT1.OlympiadWnd_DF_Apply"></td></tr>
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_watchmatch" value="View the battle" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-rewards.html" value="Receive the reward" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-info.html" value="Learn more about Olympiad" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
++		<tr><td align=center>Welcome to the World Olympiad.<br1>Walk the path of the hero.</td></tr>
++		<tr><td height=18></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager joinMatch" value="Request Match" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Apply_Down" fore="L2UI_CT1.OlympiadWnd_DF_Apply"></td></tr>
++		<tr><td align=center><button action="bypass -h npc_%objectId%_watchmatch" value="Spectate" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Watch_Down" fore="L2UI_CT1.OlympiadWnd_DF_Watch"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager legendRune" value="Legend Celebration Rune" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-rewards.html" value="Receive Reward" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
++		<tr><td align=center><button action="bypass -h Script OlyManager OlyManager-info.html" value="Olympiad Guide" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info"></td></tr>
+ 	</table>
+ </td></tr></table>
+-</body></html>
+\ No newline at end of file
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager-rewards.html dist/game/data/scripts/ai/others/OlyManager/OlyManager-rewards.html
+index dfa1f1f..305565e 100644
+--- dist/game/data/scripts/ai/others/OlyManager/OlyManager-rewards.html
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager-rewards.html
+@@ -1,15 +1,14 @@
+ <html><body scroll="no">
+ <table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+ 	<tr><td height=30></td></tr>
+-	<tr><td align=center>You can help you calculate your Olympiad points</td></tr>
++	<tr><td align=center>Marks of Battle earned for competing in the Olympiad</td></tr>
+ 	<tr><td height=10></td></tr>
+-	<tr><td align=center>or you can purchase Marks of Battle.</td></tr>
++	<tr><td align=center>can be exchanged for various items.</td></tr>
+ 	<tr><td height=50></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager calculatePoints" value="I want to calculate my points." width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Reward_Down" fore="L2UI_CT1.OlympiadWnd_DF_Reward"></td></tr>
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 2095" value="Trade supplies" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
+-		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 712" value="Trade supplies (PvP)" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
+-		<tr><td align=center><button action="bypass -h Script OlyManager showEquipmentReward" value="Trade equipment" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEquip_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEquip"></td></tr>
++		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 316880001" value="Exchange for supplies" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
++		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 316880002" value="Exchange for supplies (PvP)" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEtc_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEtc"></td></tr>
++		<tr><td align=center><button action="bypass -h npc_%objectId%_multisell 316880003" value="Exchange for equipment" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_BuyEquip_Down" fore="L2UI_CT1.OlympiadWnd_DF_BuyEquip"></td></tr>
+ 		<tr><td align=center><button action="bypass -h Script OlyManager index" value="Back" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Back_Down" fore="L2UI_CT1.OlympiadWnd_DF_Back"></td></tr>
+ 	<tr><td height=40></td></tr>
+ </table>
+-</body></html>
+\ No newline at end of file
++</body></html>
+diff --git dist/game/data/scripts/ai/others/OlyManager/OlyManager.java dist/game/data/scripts/ai/others/OlyManager/OlyManager.java
+index 64326a8..b1d02c3 100644
+--- dist/game/data/scripts/ai/others/OlyManager/OlyManager.java
++++ dist/game/data/scripts/ai/others/OlyManager/OlyManager.java
+@@ -19,6 +19,7 @@ package ai.others.OlyManager;
+ import java.time.DayOfWeek;
+ import java.time.LocalDate;
+ import java.time.temporal.WeekFields;
++import java.util.Calendar;
+ import java.util.EnumMap;
+ import java.util.List;
+ import java.util.Map;
+@@ -37,7 +38,9 @@ import org.l2jmobius.gameserver.entity.actor.enums.player.PlayerClass;
+ import org.l2jmobius.gameserver.entity.zone.ZoneId;
+ import org.l2jmobius.gameserver.handler.BypassHandler;
+ import org.l2jmobius.gameserver.handler.IBypassHandler;
++import org.l2jmobius.gameserver.managers.RankManager;
+ import org.l2jmobius.gameserver.mechanics.olympiad.CompetitionType;
++import org.l2jmobius.gameserver.mechanics.olympiad.Hero;
+ import org.l2jmobius.gameserver.mechanics.olympiad.Olympiad;
+ import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameManager;
+ import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadGameTask;
+@@ -45,8 +48,9 @@ import org.l2jmobius.gameserver.mechanics.olympiad.OlympiadManager;
+ import org.l2jmobius.gameserver.mechanics.script.Script;
+ import org.l2jmobius.gameserver.network.SystemMessageId;
+ import org.l2jmobius.gameserver.network.serverpackets.olympiad.ExOlympiadMatchList;
++import org.l2jmobius.gameserver.util.StatSet;
+ 
+ /**
+  * Olympiad Manager AI.
+- * @author St3eT
++ * @author St3eT, Notorion
+  */
+@@ -57,7 +61,11 @@ public class OlyManager extends Script implements IBypassHandler
+ 	// NPC
+ 	private static final int MANAGER = 31688;
+ 	
++	// Items
++	private static final int LEGEND_CELEBRATION_RUNE = 48553;
++	
+ 	// Misc
++	private static final String LEGEND_CELEBRATION_RUNE_TIME = "LEGEND_CELEBRATION_RUNE_TIME";
+ 	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new EnumMap<>(CategoryType.class);
+ 	static
+ 	{
+@@ -101,10 +109,46 @@ public class OlyManager extends Script implements IBypassHandler
+ 			case "OlyManager-infoPointsCalc.html":
+ 			case "OlyManager-rank.html":
+ 			case "OlyManager-rewards.html":
++			case "OlyManager-legendRune.html":
+ 			{
+ 				htmltext = event;
+ 				break;
+ 			}
++			case "legendRune":
++			{
++				if (!hasActiveLegend())
++				{
++					htmltext = "OlyManager-legendRuneNone.html";
++					break;
++				}
++				
++				final Calendar resetCal = Calendar.getInstance();
++				resetCal.set(Calendar.HOUR_OF_DAY, 6);
++				resetCal.set(Calendar.MINUTE, 30);
++				resetCal.set(Calendar.SECOND, 0);
++				resetCal.set(Calendar.MILLISECOND, 0);
++				if (System.currentTimeMillis() < resetCal.getTimeInMillis())
++				{
++					resetCal.add(Calendar.DAY_OF_MONTH, -1);
++				}
++				
++				if (player.getVariables().getLong(LEGEND_CELEBRATION_RUNE_TIME, 0) >= resetCal.getTimeInMillis())
++				{
++					htmltext = "OlyManager-legendRuneAlready.html";
++					break;
++				}
++				
++				if (!player.isInventoryUnder80(false))
++				{
++					player.sendPacket(SystemMessageId.NOT_ENOUGH_SPACE_IN_THE_INVENTORY_UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
++					break;
++				}
++				
++				giveItems(player, LEGEND_CELEBRATION_RUNE, 1);
++				player.getVariables().set(LEGEND_CELEBRATION_RUNE_TIME, System.currentTimeMillis());
++				htmltext = "OlyManager-legendRuneSuccess.html";
++				break;
++			}
+ 			case "index":
+ 			{
+ 				htmltext = onFirstTalk(npc, player);
+@@ -118,19 +162,13 @@ public class OlyManager extends Script implements IBypassHandler
+ 				}
+ 				else
+ 				{
+-					switch (LocalDate.now().get(WeekFields.of(DayOfWeek.MONDAY, 7).weekOfMonth()))
+-					{
+-						case 1: // First week is class and non-class battles
+-						{
+-							htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
+-							break;
+-						}
+-						default: // Rest is only 1v1 non-class matches
+-						{
+-							htmltext = getHtm(player, "OlyManager-joinMatch.html");
+-							break;
+-						}
+-					}
++					// World Olympiad uses only 1v1 all-class matches.
++					// switch (LocalDate.now().get(WeekFields.of(DayOfWeek.MONDAY, 7).weekOfMonth()))
++					// {
++					// 	case 1: ... OlyManager-joinMatchClass.html
++					// 	default: ... OlyManager-joinMatch.html
++					// }
++					htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
+ 					
+ 					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(Olympiad.getInstance().getPeriod()));
+ 					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
+@@ -296,6 +334,18 @@ public class OlyManager extends Script implements IBypassHandler
+ 		return htmltext;
+ 	}
+ 	
++	private boolean hasActiveLegend()
++	{
++		final StatSet legendRank = RankManager.getInstance().getOlyRankList().get(1);
++		if (legendRank == null)
++		{
++			return false;
++		}
++		
++		final int legendId = legendRank.getInt("charId", 0);
++		return (legendId > 0) && Hero.getInstance().getHeroes().containsKey(legendId);
++	}
++	
+ 	@Override
+ 	public String onFirstTalk(Npc npc, Player player)
+ 	{
+diff --git dist/game/data/scripts/instances/CeremonyOfChaos/CeremonyOfChaos.java dist/game/data/scripts/instances/CeremonyOfChaos/CeremonyOfChaos.java
+index a095d4f..7389a90 100644
+--- dist/game/data/scripts/instances/CeremonyOfChaos/CeremonyOfChaos.java
++++ dist/game/data/scripts/instances/CeremonyOfChaos/CeremonyOfChaos.java
+@@ -123,7 +123,7 @@ public class CeremonyOfChaos extends Script
+ 	
+ 	private void startEvent()
+ 	{
+-		// Enabled Tuesday, Wednesday, Thursday
++		// Enabled Monday, Tuesday, Wednesday, Thursday
+ 		final Calendar calendar = Calendar.getInstance();
+ 		final int day = calendar.get(Calendar.DAY_OF_WEEK);
+ 		if (!CeremonyOfChaosConfig.COC_COMPETITION_DAYS.contains(day))
+@@ -131,7 +131,7 @@ public class CeremonyOfChaos extends Script
+ 			return;
+ 		}
+ 		
+-		// Event starts at 18, should stop if past 00:00.
++		// Event starts at 20, should stop if past 00:00.
+ 		if (calendar.get(Calendar.HOUR_OF_DAY) < CeremonyOfChaosConfig.COC_START_TIME)
+ 		{
+ 			return;
+diff --git dist/game/data/stats/items/48500-48599.xml dist/game/data/stats/items/48500-48599.xml
+index befffec..f43baa9 100644
+--- dist/game/data/stats/items/48500-48599.xml
++++ dist/game/data/stats/items/48500-48599.xml
+@@ -768,6 +768,7 @@
+ 		<set name="is_destroyable" val="false" />
+ 		<set name="is_depositable" val="false" />
+ 		<set name="is_sellable" val="false" />
++		<set name="time" val="120" />
+ 		<skills>
+ 			<skill id="39221" level="1" /> <!-- Legend Celebration Rune -->
+ 		</skills>
+diff --git java/org/l2jmobius/gameserver/config/CeremonyOfChaosConfig.java java/org/l2jmobius/gameserver/config/CeremonyOfChaosConfig.java
+index 7f922ff..2339544 100644
+--- java/org/l2jmobius/gameserver/config/CeremonyOfChaosConfig.java
++++ java/org/l2jmobius/gameserver/config/CeremonyOfChaosConfig.java
+@@ -55,11 +55,11 @@ public class CeremonyOfChaosConfig
+ 	{
+ 		final ConfigReader config = new ConfigReader(CEREMONY_OF_CHAOS_CONFIG_FILE);
+ 		COC_COMPETITION_DAYS = new ArrayList<>();
+-		for (String s : config.getString("CoCCompetitionDays", "3,4,5").split(","))
++		for (String s : config.getString("CoCCompetitionDays", "2,3,4,5").split(","))
+ 		{
+ 			COC_COMPETITION_DAYS.add(Integer.parseInt(s));
+ 		}
+-		COC_START_TIME = config.getInt("CoCStartTime", 18);
++		COC_START_TIME = config.getInt("CoCStartTime", 20);
+ 		COC_MIN_PLAYERS = config.getInt("CoCMinPlayers", 2);
+ 		COC_MAX_PLAYERS = config.getInt("CoCMaxPlayers", 18);
+ 		COC_MAX_ARENAS = config.getInt("CoCMaxArenas", 5);
